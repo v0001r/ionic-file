@@ -1,0 +1,114 @@
+page-sign_in {
+    .header {
+        padding-top: 0px;
+        overflow: hidden;
+
+        .toolbar {
+            .bar-button {
+                display: none !important;
+            }
+
+            .title .toolbar-title {
+                display: block;
+                margin-top: 50px !important;
+
+                span {
+                    color: $theme-color !important;
+                }
+            }
+        }
+    }
+
+    .scroll-content {
+        margin-top: 137px !important;
+    }
+
+
+    .socila_section {
+        background: $dark;
+        padding: 85px 19px 18px 19px;
+
+        p {
+            color: lighten($text-light, 17%);
+            margin: 0;
+            font-size: 1.65rem;
+            padding-bottom: 15px;
+            font-weight: 400;
+        }
+
+        .row {
+            margin-bottom: 23px;
+            margin: 0 -10px;
+
+            .col {
+                padding: 0 10px;
+            }
+        }
+
+        .button.btn {
+            color: darken($text-light, 20%) !important;
+            letter-spacing: 0;
+            font-size: 1.57rem !important;
+            background: $white !important;
+            border: none !important;
+
+
+            &[block] {
+                border-radius: 7px;
+            }
+
+            img {
+                width: 18px;
+                position: relative;
+                left: -12px;
+            }
+
+        }
+    }
+
+    .list {
+        margin-bottom: 0;
+    }
+
+    .form {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        border-top: 7px solid $bg-color;
+
+        h2 {
+            color: darken($text-light, 100%) !important;
+            margin: 0;
+            font-size: 1.7rem;
+            padding-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .item .item-inner .label {
+            span {
+                color: $theme-color;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .footer {
+        background: $bg-color;
+
+        .button.btn {
+            height: 50px;
+
+            &[clear] {
+                border: none !important;
+            }
+        }
+
+    }
+
+    .item {
+        .input-cover {
+            top: unset;
+            bottom: 13px;
+            height: 41px;
+        }
+    }
+}

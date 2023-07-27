@@ -1,0 +1,52 @@
+page-my_profile {
+    .header{
+        .toolbar{
+            padding-bottom: 10px;
+        }
+    }
+    .form {
+        padding: 0;
+        padding-top: 30px;
+
+        .profile_img {
+            position: relative;
+            width: 92px;
+            height: 80px;
+
+            .img_box {
+                max-width: 80px;
+                min-width: 80px;
+                height: 80px;
+                background: darken($gray, 0%);
+                border-radius: 4px;
+            }
+
+            ion-icon {
+                background: $theme-color;
+                border-radius: 50%;
+                color: $white;
+                position: absolute;
+                top: -4px;
+                right: 0;
+                width: 23px;
+                height: 23px;
+                text-align: center;
+                line-height: 23px;
+                font-size: 1.5rem;
+            }
+        }
+
+
+        .list {
+            margin-top: 30px;
+
+            .item .item-inner ion-textarea,
+            .item .item-inner ion-input {
+                font-weight: 400;
+            }
+        }
+        .item.item-select .select .select-text{
+             font-weight: 400;
+        }
+    }
+}

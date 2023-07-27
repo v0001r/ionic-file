@@ -1,0 +1,46 @@
+<ion-header class="theme_header bg-transparent">
+    <ion-navbar>
+	<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+        <ion-title>
+           Login <br>
+        </ion-title>
+    </ion-navbar>
+</ion-header> 
+
+<ion-content >
+
+    <div class="form">
+        <h2> Sign up {{'or_signin_with_your_account' | translate}}</h2>
+        <ion-list no-lines>
+            <!--ion-item>
+                <ion-label>Mobile No.</ion-label>
+                <ion-input type="text" value="" ></ion-input>
+            </ion-item>
+            <ion-item class="password">
+                <ion-label class="d-flex">{{'password' | translate}}<span class="end">{{'forgot' | translate}}</span></ion-label>
+                <ion-input type="password" value=""></ion-input>
+            </ion-item-->
+			
+			<ion-item>
+                <ion-label>{{'phone_number' | translate}}</ion-label>
+                <ion-input type="text" value="" name="mobile"[(ngModel)]="data.mobile"></ion-input>
+            </ion-item>
+            <ion-item class="password">
+                <ion-label class="d-flex">Password</ion-label>
+                <ion-input type="password" value="" name="pasword"[(ngModel)]="data.pasword"></ion-input>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <ion-row>
+        <ion-col col-6 no-padding>
+            <button ion-button full clear no-margin class="btn" (click)="sign_up()">{{'sign_up' | translate}}</button>
+        </ion-col>
+        <ion-col col-6 no-padding>
+            <button ion-button no-margin full class="btn" (click)="login()">{{'sign_in_now' | translate}}</button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

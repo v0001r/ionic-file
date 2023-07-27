@@ -1,0 +1,62 @@
+page-support {
+    .header.theme_header .toolbar .title .toolbar-title {
+        display: block !important;
+        margin-top: 15px;
+        padding: 0 10px;
+
+        h2 {
+            margin: 0;
+            white-space: normal;
+          color: lighten($text-light, 17%);
+            font-size: 1.7rem;
+            font-weight: 400;
+            margin-top: 8px;
+            line-height: 22px;
+        }
+    }
+
+    .banner {
+        padding: 18px 16px;
+        padding-bottom: 24px;
+        background: $dark;
+
+        .row {
+            margin: 0 -10px;
+
+            .col {
+                padding: 0 10px;
+
+                .button.btn[block] {
+                    border-radius: 7px;
+                    ion-icon {
+                        position: relative;
+                        right: 20px;
+                        font-size: 1.8rem;
+                    }
+
+                    &[clear] {
+                        background: $white !important;
+                        border: none !important;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .form {
+        padding-top: 16px;
+        border-top: 10px solid $bg-color;
+
+        h2 {
+            color: darken($dark, 100%);
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+
+        .list {
+            margin-top: 8px;
+        }
+    }
+}

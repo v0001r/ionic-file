@@ -1,0 +1,146 @@
+<ion-menu *ngIf="rtlSide == 'left'" side="left" [content]="content">
+    <ion-header>
+        <div class="profile_box d-flex" menuClose (click)="my_profile()">
+            <div class="profile_details">
+                <h2>{{agent_name}}</h2>
+                <p>{{'view_profile' | translate}}</p>
+            </div>
+        </div>
+       
+		
+		
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines>
+            <ion-item menuClose (click)="home()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-home"></ion-icon>
+                </ion-avatar>
+                <h2>{{'home' | translate}}</h2>
+            </ion-item>
+          <ion-item menuClose (click)="view_pdf()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-file-text"></ion-icon>
+                </ion-avatar>
+                <h2>View Scheme Details</h2>
+            </ion-item>
+            <ion-item menuClose (click)="terms_conditions()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-assignment"></ion-icon>
+                </ion-avatar>
+                <h2>{{'terms_condition' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="support()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-email"></ion-icon>
+                </ion-avatar>
+                <h2>{{'need_help' | translate}}</h2>
+            </ion-item>
+            
+          
+			<ion-item menuClose (click)="logout()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-power-setting"></ion-icon>
+                </ion-avatar>
+                <h2>Logout</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    
+</ion-menu>
+
+<ion-menu *ngIf="rtlSide == 'right'" side="right" [content]="content">
+    <ion-header>
+        <div class="profile_box d-flex" menuClose (click)="my_profile()">
+            <div class="profile_img center_img">
+                <img src="assets/imgs/profile_pic.png" class="crop_img">
+            </div>
+            <div class="profile_details">
+                <h2>Sam Smith</h2>
+                <p>{{'view_profile' | translate}}</p>
+            </div>
+        </div>
+        <ion-list no-lines>
+            <ion-item menuClose (click)="sell_your_car()" class="active">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-car"></ion-icon>
+                </ion-avatar>
+                <h2>{{'sell_your_car' | translate}}</h2>
+            </ion-item>
+        </ion-list>
+        <div class="banner">
+            <ion-row text-center>
+                <ion-col col-4 menuClose (click)="home()">
+                    <img src="assets/imgs/ic_newcars_active.png">
+                    <h2>{{'new_cars' | translate}}</h2>
+                </ion-col>
+                <ion-col col-4 menuClose (click)="home()">
+                    <img src="assets/imgs/ic_usedcars_active.png">
+                    <h2>{{'used_cars' | translate}}</h2>
+                </ion-col>
+                <ion-col col-4 menuClose (click)="home()">
+                    <img src="assets/imgs/ic_compare_active.png">
+                    <h2>{{'compare_cars' | translate}}</h2>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-header>
+
+    <ion-content>
+        <ion-list no-lines>
+            <ion-item menuClose (click)="home()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-home"></ion-icon>
+                </ion-avatar>
+                <h2>{{'home' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="favorites()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-favorite"></ion-icon>
+                </ion-avatar>
+                <h2>{{'favorites' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="terms_conditions()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-assignment"></ion-icon>
+                </ion-avatar>
+                <h2>{{'terms_condition' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="support()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-email"></ion-icon>
+                </ion-avatar>
+                <h2>{{'need_help' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose>
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-thumb-up"></ion-icon>
+                </ion-avatar>
+                <h2>{{'rate_us' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose (click)="manageLanguage()">
+                <ion-avatar item-start>
+                    <ion-icon name="md-globe"></ion-icon>
+                </ion-avatar>
+                <h2>{{'change_language' | translate}}</h2>
+            </ion-item>
+            <ion-item menuClose *ngIf="!agent_id" (click)="sign_in()">
+                <ion-avatar item-start>
+                    <ion-icon class="zmdi zmdi-power-setting"></ion-icon>
+                </ion-avatar>
+                <h2>login</h2>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <ion-footer *ngIf="config.demoMode">
+        <ion-item menuClose (click)="developed_by()" no-lines>
+            <div class="div-logo">
+                <h4 class="text-white-dev">{{'developed_by' | translate}}</h4>
+                <img class="img-logo" src="assets/imgs/opus.png" alt="">
+            </div>
+        </ion-item>
+    </ion-footer>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

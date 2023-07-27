@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar>
+           <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{'my_profile' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+	
+    <div class="container">
+	  
+    <div class="form">
+		<!--ion-row justify-content-end>  
+     <button ion-button  no-margin full style="width: 50%;
+    top: -82px;
+	 float: right;" class="btn" (click)="mycars()">My Cars</button>
+		</ion-row--><!--ion-row justify-content-end>  
+		<button ion-button  no-margin full style="width: 50%;
+    top: -53px;" class="btn" (click)="myrequest()">My Request</button>
+		</ion-row-->
+		
+		
+        <ion-list no-lines>
+            <ion-item>
+                <ion-label>{{'enter_full_name' | translate}}</ion-label>
+                <ion-input type="text" value="{{agent?.username}}" name="name" [(ngModel)]="data.name"></ion-input>
+				<ion-input type="text"  hidden value="{{agent?.id}}" name="id" [(ngModel)]="data.id"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{'email_address' | translate}}</ion-label>
+                <ion-input type="email" value="{{agent?.email}}" name="email" [(ngModel)]="data.email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>{{'phone_number' | translate}}</ion-label>
+                <ion-input type="text" readonly="" value="{{agent?.phone}}" name="mobile"[(ngModel)]="data.mobile"></ion-input>
+            </ion-item>            
+			<ion-item>
+                <ion-label>Change Password</ion-label>
+                <ion-input type="text"  value="" name="password"[(ngModel)]="data.password"></ion-input>
+            </ion-item>
+            <!--ion-item>
+                <ion-label class="d-flex">{{'select_gender' | translate}}</ion-label>
+                <ion-select [(ngModel)]="select_gender">
+                    <ion-option value="male">Male</ion-option>
+                    <ion-option value="female">Female</ion-option>
+                </ion-select>
+            </ion-item--->
+        </ion-list>
+    </div>
+    </div>
+</ion-content>
+<ion-footer no-border>
+    <button ion-button  no-margin full class="btn" (click)="profileupdate()">{{'update_profile' | translate}}</button>
+<!--button ion-button  no-margin full class="btn"  (click)="presentAlert()" expand="round" color="success">Toast Show</button-->
+</ion-footer>
